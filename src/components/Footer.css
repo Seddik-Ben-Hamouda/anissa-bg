@@ -1,0 +1,355 @@
+/* ═══════════════════════════════════════════════════════
+   FOOTER — Mobile-first responsive
+═══════════════════════════════════════════════════════ */
+
+.site-footer {
+  position: relative;
+  z-index: 6;
+  width: 100%;
+  background: var(--color-obsidian);
+  border-top: 1px solid rgba(243, 236, 224, 0.09);
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0;
+
+  /* Mobile-first padding — compact on small screens */
+  padding: 2.5rem 1.25rem 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .site-footer {
+    padding: 3.5rem 2rem 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .site-footer {
+    padding: clamp(4rem, 8vh, 6.5rem) clamp(2rem, 6vw, 5.5rem) clamp(2rem, 4vh, 3rem);
+  }
+}
+
+/* ── Watermark ─────────────────────────────────────────────── */
+.footer-watermark {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(98vw, 1650px);
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+  opacity: 0.04;
+  line-height: 0;
+}
+
+.footer-watermark svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer-watermark text {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 245px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  fill: var(--color-ivory);
+}
+
+/* ── Inner wrapper ─────────────────────────────────────────── */
+.footer-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* ── LA GAZETTE / Newsletter ───────────────────────────────── */
+.footer-gazette-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 600px) {
+  .footer-gazette-section {
+    margin-bottom: 2.8rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .footer-gazette-section {
+    margin-bottom: clamp(3.5rem, 7vh, 5.5rem);
+  }
+}
+
+.footer-gazette-content {
+  text-align: center;
+  width: 100%;
+  max-width: 560px;
+}
+
+.footer-eyebrow {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(0.85rem, 2.5vw, 1.35rem);
+  letter-spacing: 0.35em;
+  text-indent: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.6rem;
+  font-weight: 300;
+}
+
+@media (min-width: 600px) {
+  .footer-eyebrow {
+    margin-bottom: 0.9rem;
+  }
+}
+
+.footer-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 400;
+  color: var(--color-ivory);
+  margin: 0 0 1.25rem;
+  letter-spacing: 0.015em;
+  line-height: 1.15;
+}
+
+@media (min-width: 600px) {
+  .footer-title {
+    margin: 0 0 1.75rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .footer-title {
+    font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+    margin: 0 0 clamp(1.6rem, 4vh, 2.8rem);
+  }
+}
+
+.footer-subscribe-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px solid rgba(243, 236, 224, 0.28);
+  padding-bottom: 0.7rem;
+  transition: border-color 0.3s ease;
+  gap: 0.5rem;
+}
+
+.footer-subscribe-form:focus-within {
+  border-bottom-color: var(--color-gold-bright);
+}
+
+.footer-subscribe-form input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--color-ivory);
+  font-family: "Jost", sans-serif;
+  font-size: clamp(0.7rem, 2.5vw, 0.96rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.3rem 0;
+  font-weight: 400;
+}
+
+.footer-subscribe-form input::placeholder {
+  color: var(--color-ivory-dim);
+  letter-spacing: 0.14em;
+  transition: color 0.3s ease;
+}
+
+.footer-subscribe-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--color-gold);
+  font-family: "Jost", sans-serif;
+  font-size: clamp(0.7rem, 2.2vw, 0.9rem);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.3rem 0 0.3rem 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-subscribe-btn:hover {
+  color: var(--color-gold-bright);
+  transform: translateY(-1px);
+}
+
+/* ── Social Icons under Subscribe Form (Mobile) ────────────── */
+.footer-social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 900px) {
+  .footer-social-icons {
+    display: none;
+  }
+}
+
+.footer-social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(243, 236, 224, 0.16);
+  background: rgba(243, 236, 224, 0.03);
+  color: var(--color-gold);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.footer-social-link:hover,
+.footer-social-link:active {
+  border-color: var(--color-gold);
+  color: var(--color-gold-bright);
+  background: rgba(212, 175, 55, 0.12);
+  transform: translateY(-2px);
+}
+
+/* ── Navigation Grid ───────────────────────────────────────── */
+/* Hidden on mobile, shown on desktop (>= 900px) */
+.footer-nav-grid {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .footer-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    margin-bottom: clamp(3rem, 7vh, 6rem);
+  }
+}
+
+.footer-nav-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col-title {
+  font-family: "Jost", sans-serif;
+  font-size: clamp(0.65rem, 2vw, 0.82rem);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin: 0 0 0.85rem;
+  font-weight: 600;
+}
+
+@media (min-width: 900px) {
+  .footer-col-title {
+    margin: 0 0 1.5rem;
+  }
+}
+
+.footer-col-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+@media (min-width: 900px) {
+  .footer-col-links {
+    gap: 1rem;
+  }
+}
+
+.footer-col-links a {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(0.9rem, 2.5vw, 1.15rem);
+  color: var(--color-ivory-dim);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.footer-col-links a:hover {
+  color: var(--color-ivory);
+  transform: translateX(3px);
+}
+
+/* ── Bottom Bar ────────────────────────────────────────────── */
+.footer-bottom-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(243, 236, 224, 0.07);
+  font-family: "Jost", sans-serif;
+  font-size: clamp(0.6rem, 1.8vw, 0.72rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ivory-dim);
+  opacity: 0.65;
+}
+
+@media (min-width: 900px) {
+  .footer-bottom-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+  }
+}
+
+.footer-bottom-copy {
+  font-weight: 400;
+}
+
+.footer-bottom-cities {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 400;
+}
+
+.footer-divider {
+  opacity: 0.4;
+  font-size: 0.65rem;
+}
+
+.footer-bottom-legal {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-weight: 400;
+}
+
+.footer-bottom-legal a {
+  color: var(--color-ivory-dim);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.footer-bottom-legal a:hover {
+  color: var(--color-ivory);
+  opacity: 1;
+}

@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: #0B0906;
+  --color-charcoal: #15120D;
+  --color-charcoal-light: #1E1912;
+  --color-gold: #C6A15B;
+  --color-gold-dim: #8C7238;
+  --color-gold-bright: #E0C387;
+  --color-ivory: #F3ECE0;
+  --color-ivory-dim: #C9C0AE;
+  --color-ember: #7A2E22;
+  --color-ember-bright: #A6432F;
+
+  --font-display: "Cormorant Garamond", serif;
+  --font-sans: "Jost", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-obsidian);
+  color: var(--color-ivory);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+select option {
+  background-color: var(--color-charcoal);
+  color: var(--color-ivory);
+}
+
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-obsidian);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.tracked {
+  letter-spacing: 0.18em;
+}
+
+.tracked-wide {
+  letter-spacing: 0.28em;
+}
+
+.hairline {
+  border-color: var(--color-gold-dim);
+  opacity: 0.5;
+}
+
+/* Custom scrollbar, quiet and thin */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-obsidian);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-charcoal-light);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus visibility, kept elegant rather than default blue */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 1px solid var(--color-gold);
+  outline-offset: 3px;
+}
