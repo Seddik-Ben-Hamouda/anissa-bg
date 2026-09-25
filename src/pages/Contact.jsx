@@ -34,8 +34,10 @@ export default function Contact() {
         aria-hidden="true"
       >
         <img
-          src="/images/logo.webp"
+          src="/images/logo.avif"
           alt=""
+          loading="lazy"
+          decoding="async"
           className="h-full w-full object-cover object-center opacity-10 mix-blend-screen"
         />
         <div className="absolute inset-0 bg-obsidian/40" />

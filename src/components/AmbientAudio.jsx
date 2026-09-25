@@ -67,7 +67,7 @@ export default function AmbientAudio() {
 
   return (
     <>
-      <audio ref={audioRef} src="/images/audio.mp3" loop preload="auto" />
+      <audio ref={audioRef} src="/images/audio.mp3" loop preload="none" />
       <button
         type="button"
         onClick={toggleAudio}

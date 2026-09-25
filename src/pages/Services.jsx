@@ -78,8 +78,10 @@ export default function Services() {
       <section className="grid grid-cols-1 md:grid-cols-2">
         <div className="relative overflow-hidden aspect-square md:aspect-auto md:min-h-[560px]">
           <img
-            src="/images/Threads of Light/healing-session.webp"
+            src="/images/Threads of Light/healing-session.avif"
             alt="Threads of Light — Healing Session"
+            fetchPriority="high"
+            decoding="async"
             className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105"
           />
           <div

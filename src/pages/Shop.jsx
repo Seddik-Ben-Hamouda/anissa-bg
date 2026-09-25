@@ -80,7 +80,7 @@ export default function Shop() {
                 onClick={() => setActiveCategory(c.slug)}
                 className="group relative aspect-[16/10] overflow-hidden border border-gold-dim/20 bg-charcoal text-left"
               >
-                <img src={c.image_url} alt={c.name} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img src={c.image_url} alt={c.name} loading="lazy" decoding="async" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent" />
                 <div className="absolute bottom-2 left-3 right-3">
                   <p className="font-display text-sm text-ivory group-hover:text-gold transition-colors">{c.name}</p>
@@ -98,7 +98,7 @@ export default function Shop() {
             <div className="relative mt-8 overflow-hidden border border-gold-dim/20 bg-charcoal">
               {activeCat.image_url && (
                 <div className="absolute inset-0 opacity-20">
-                  <img src={activeCat.image_url} alt="" className="h-full w-full object-cover" />
+                  <img src={activeCat.image_url} alt="" loading="lazy" decoding="async" className="h-full w-full object-cover" />
                 </div>
               )}
               <div className="relative z-10 px-6 py-8 text-center">
@@ -134,6 +134,8 @@ export default function Shop() {
                     <img
                       src={product.product_images[0].image_url}
                       alt={product.name_fr}
+                      loading="lazy"
+                      decoding="async"
                       className="aspect-[3/4] w-full object-cover"
                     />
                   ) : (

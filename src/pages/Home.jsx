@@ -34,6 +34,7 @@ export default function Home() {
             loop
             muted
             playsInline
+            preload="metadata"
             className="h-full w-full object-cover object-center scale-[1.02]"
             src="/images/hero-video.mp4"
           />
@@ -90,6 +91,8 @@ export default function Home() {
             <img
               src={primaryCollection.image_url}
               alt={primaryCollection.name}
+              loading="lazy"
+              decoding="async"
               className="aspect-square md:h-full w-full object-cover transition-transform duration-700 hover:scale-105"
             />
           ) : (
@@ -123,6 +126,8 @@ export default function Home() {
                         <img
                           src={thumb}
                           alt={p.name_fr}
+                          loading="lazy"
+                          decoding="async"
                           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                         />
                       ) : (
@@ -173,6 +178,8 @@ export default function Home() {
                       <img
                         src={cat.image_url}
                         alt={cat.name}
+                        loading="lazy"
+                        decoding="async"
                         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                     ) : (
@@ -215,6 +222,8 @@ export default function Home() {
           <img
             src="/images/About Page/about.webp"
             alt="Anissa BG — The Artist"
+            loading="lazy"
+            decoding="async"
             className="h-full w-full object-cover object-top transition-transform duration-700 hover:scale-105"
           />
           <div

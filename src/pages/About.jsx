@@ -12,8 +12,10 @@ export default function About() {
       <section className="grid grid-cols-1 md:grid-cols-2" style={{ minHeight: '90vh' }}>
         <div className="relative overflow-hidden" style={{ minHeight: '60vw', maxHeight: '90vh' }}>
           <img
-            src="/images/About Page/about-1.webp"
+            src="/images/About Page/about-1.avif"
             alt="Anissa BG — artist and textile alchemist"
+            fetchPriority="high"
+            decoding="async"
             style={{
               width: '100%',
               height: '100%',
@@ -58,24 +60,30 @@ export default function About() {
         {/* Large left photo — spans 2 rows */}
         <div style={{ gridRow: '1 / 3', overflow: 'hidden', position: 'relative' }}>
           <img
-            src="/images/About Page/about-2.webp"
+            src="/images/About Page/about-2.avif"
             alt="Anissa at work — textile ritual"
+            loading="lazy"
+            decoding="async"
             style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
           />
         </div>
         {/* Top right */}
         <div style={{ overflow: 'hidden', position: 'relative' }}>
           <img
-            src="/images/About Page/about-3.webp"
+            src="/images/About Page/about-3.avif"
             alt="Sacred materials — wool and crystal"
+            loading="lazy"
+            decoding="async"
             style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
           />
         </div>
         {/* Bottom right */}
         <div style={{ overflow: 'hidden', position: 'relative' }}>
           <img
-            src="/images/About Page/about-4.webp"
+            src="/images/About Page/about-4.avif"
             alt="Healing through form — textile alchemy"
+            loading="lazy"
+            decoding="async"
             style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
           />
         </div>
@@ -84,8 +92,10 @@ export default function About() {
       {/* ── Full-width cinematic photo ── */}
       <section style={{ height: 'clamp(320px, 50vh, 600px)', overflow: 'hidden', position: 'relative' }}>
         <img
-          src="/images/About Page/about-5.webp"
+          src="/images/About Page/about-5.avif"
           alt="The sacred art of healing — Anissa BG"
+          loading="lazy"
+          decoding="async"
           style={{
             width: '100%',
             height: '100%',

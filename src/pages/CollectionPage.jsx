@@ -58,6 +58,8 @@ export default function CollectionPage() {
             <img
               src={category.image_url}
               alt=""
+              fetchPriority="high"
+              decoding="async"
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-obsidian/80" />
@@ -102,6 +104,8 @@ export default function CollectionPage() {
                     <img
                       src={thumb}
                       alt={item.name_fr}
+                      loading="lazy"
+                      decoding="async"
                       className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   ) : (

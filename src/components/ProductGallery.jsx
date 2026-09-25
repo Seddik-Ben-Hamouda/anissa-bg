@@ -42,6 +42,8 @@ export default function ProductGallery({ images = [], title = '', fallbackNumber
           key={activeImage.image_url}
           src={activeImage.image_url}
           alt={title || `Image ${activeIndex + 1}`}
+          fetchPriority="high"
+          decoding="async"
           className="h-full w-full object-cover transition-all duration-500 ease-out cursor-zoom-in"
           onClick={() => setLightboxOpen(true)}
         />
@@ -104,7 +106,7 @@ export default function ProductGallery({ images = [], title = '', fallbackNumber
                   : 'border-gold-dim/25 opacity-60 hover:opacity-100 hover:border-gold-dim/60'
               }`}
             >
-              <img src={img.image_url} alt="" className="h-full w-full object-cover" />
+              <img src={img.image_url} alt="" loading="lazy" decoding="async" className="h-full w-full object-cover" />
             </button>
           ))}
         </div>
@@ -139,6 +141,7 @@ export default function ProductGallery({ images = [], title = '', fallbackNumber
             <img
               src={activeImage.image_url}
               alt={title}
+              decoding="async"
               className="max-h-[85vh] max-w-[85vw] object-contain border border-gold-dim/20 shadow-2xl"
             />
           </div>

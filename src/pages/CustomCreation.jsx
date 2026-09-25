@@ -61,8 +61,10 @@ export default function CustomCreation() {
       <section className="grid grid-cols-1 md:grid-cols-2">
         <div className="relative overflow-hidden aspect-square md:aspect-auto md:min-h-[480px]">
           <img
-            src="/images/Custom Creation/custom-creation-1.webp"
+            src="/images/Custom Creation/custom-creation-1.avif"
             alt="Handcrafting custom creation"
+            fetchPriority="high"
+            decoding="async"
             className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105"
           />
           <div
